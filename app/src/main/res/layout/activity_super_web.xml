@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/icon_close_grey"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_centerInParent="true"
+            android:textSize="16dp"
+            android:textColor="@color/titlebar_text_color"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eee"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageButton
+                android:id="@+id/ib_go_back"
+                style="@style/webview_imgbutton"
+                android:src="@drawable/web_goback_src_selector" />
+
+            <ImageButton
+                android:id="@+id/ib_go_forword"
+                style="@style/webview_imgbutton"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/ib_go_back"
+                android:src="@drawable/web_goforward_src_selector" />
+
+            <ImageButton
+                android:id="@+id/ib_web_refresh"
+                style="@style/webview_imgbutton"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_web_refresh" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
