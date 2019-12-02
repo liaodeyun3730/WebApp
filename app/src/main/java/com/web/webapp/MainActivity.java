@@ -15,5 +15,6 @@ public class MainActivity extends AppCompatActivity {
         tv_hello = findViewById(R.id.tv_hello);
         tv_hello.setText(SystemUtil.getMobileInfo());
         SuperWebActivity.startActivity(this,"https://www.baidu.com");
+        //这是master注释
     }
 }
